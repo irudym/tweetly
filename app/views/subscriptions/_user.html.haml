@@ -1,0 +1,10 @@
+%tr.with-row-select
+  %td
+    = user[:id]
+  %td
+    = user[:name]
+  %td
+    - if user[:subscribed]
+      = icon('check')
+    - else
+      = link_to "#{icon('envelope')}".html_safe, {controller: :subscriptions, action: :create, id: user[:id], name: user[:name]}, method: :post

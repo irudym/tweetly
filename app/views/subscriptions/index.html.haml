@@ -1,0 +1,13 @@
+= show_notice(notice)
+.row
+  .col-sm-12
+    // Agent status:
+    // = @agent_status
+    %table.table
+      %thead
+        %tr
+          %th ID
+          %th Name
+          %th Unsubscribe
+      %tbody
+        = render partial: 'subscription', collection: @subscriptions

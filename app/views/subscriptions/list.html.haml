@@ -1,0 +1,13 @@
+=show_errors(@subscription)
+%h2
+  List of users to subscribe
+.row
+.col-sm-12
+  %table.table
+    %thead
+      %tr
+        %th Id
+        %th Name
+        %th Subscribe
+    %tbody
+      = render partial: "user", collection: @users[:users]

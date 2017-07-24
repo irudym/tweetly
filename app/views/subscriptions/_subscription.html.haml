@@ -1,0 +1,7 @@
+%tr.with-row-select
+  %td
+    = subscription.twitter_id
+  %td
+    = subscription.twitter_name
+  %td
+    = link_to "#{icon('times')}".html_safe, subscription_path(subscription), method: :delete, confirm: 'Are you sure ?'

@@ -1,0 +1,221 @@
+@import 'colors';
+
+body {
+  background-color: $color-background;
+  font-size: 14px;
+}
+
+.main-container {
+  margin-left: 25%;
+  margin-top: 40px;
+  width: 50%;
+  background: white;
+}
+
+.header {
+  height: 13rem;
+  background: $color-header1; /* Old browsers */
+  background: -moz-linear-gradient(left, $color-header1 0%, $color-header2 35%, $color-header3 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, $color-header1 0%,$color-header2 35%,$color-header3 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, $color-header1 0%,$color-header2 35%,$color-header3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3634bb', endColorstr='#eab863',GradientType=1 ); /* IE6-9 */
+
+  padding-top: 1.5rem;
+  padding-left: 5rem;
+
+  h1 {
+    font-size: 4rem;
+    color: white;
+  }
+
+  p {
+    color: $color-subheader;
+    font-size: 0.9rem;
+  }
+}
+
+.menu {
+  background-color: $color-menu;
+  height: 7rem;
+  margin-top: -50px;
+  margin-left: 5%;
+  width: 90%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 8px 20px 0px rgba(34,20,55,0.5);
+  -moz-box-shadow: 0px 8px 20px 0px rgba(34,20,55,0.5);
+  box-shadow: 0px 8px 20px 0px rgba(34,20, 55,0.5);
+  border: 1px solid $color-menu-border;
+  padding-top: 15px;
+}
+
+.menu-item {
+  a {
+    text-decoration: none;
+  }
+}
+
+
+
+.menu-text {
+  text-transform: uppercase;
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+.menu-text-color1 {
+  color: $color-button1;
+}
+
+.menu-text-color2 {
+  color: $color-button2;
+}
+
+.menu-text-color3 {
+  color: $color-button3;
+}
+
+.circle-button {
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid $color-button-border;
+  color: white;
+  font-size: 1.5rem;
+  margin: auto;
+  padding-top: 0.25rem;
+}
+
+.menu-button1 {
+  background-color: $color-button1;
+}
+
+.menu-button2 {
+  background-color: $color-button2;
+}
+
+.menu-button3 {
+  background-color: $color-button3;
+}
+
+.menu-item1:hover {
+  .menu-button1 {
+    background-color: $color-button1-dark;
+  }
+
+  .menu-text-color1 {
+    color: $color-button1-dark;
+  }
+}
+
+.menu-item2:hover {
+  .menu-button2 {
+    background-color: $color-button2-dark;
+  }
+
+  .menu-text-color2 {
+    color: $color-button2-dark;
+  }
+}
+
+.menu-item3:hover {
+  .menu-button3 {
+    background-color: $color-button3-dark;
+  }
+
+  .menu-text-color3 {
+    color: $color-button3-dark;
+  }
+}
+
+.button {
+  border: none;
+  border-radius: 3px;
+  padding: 0.9rem 1rem;
+  color: #d8dde1;
+  letter-spacing: 0.02rem;
+}
+
+.button-gray {
+  background: #d8dde1;
+  color: black;
+}
+
+
+.app-body {
+  margin-bottom: 0px;
+  height: 100%;
+  padding-top: 3rem;
+  padding-left: 4%;
+  padding-right: 4%;
+
+  h2 {
+    color: $color-gray;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+}
+
+.logged-greeting {
+  position: relative;
+  float: right;
+  color: white;
+  margin-right: 2rem;
+}
+
+.error-block {
+  border-left: 4px solid $color-danger;
+  height: 4rem;
+  padding-left: 0.7rem;
+  margin-bottom: 1rem;
+
+  h2 {
+    font-size: 1rem;
+    color: $color-danger;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: $color-gray;
+  }
+}
+
+.info-block {
+  border-left: 4px solid $color-info;
+  height: 4rem;
+  padding-left: 0.7rem;
+  margin-bottom: 1rem;
+
+  h2 {
+    font-size: 1rem;
+    color: $color-info;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: $color-gray;
+  }
+}
+
+@media (max-width: 1300px) {
+  .main-container {
+    margin-left: 5%;
+    width: 90%;
+  }
+
+  html, body {
+    font-size: 14px;
+  }
+}
+
+//iphone
+@media (max-device-width: 736px) and (orientation: portrait) {
+  html, body {
+    font-size: 36px;
+  }
+
+  .main-container {
+    margin: 0;
+    width: 100%;
+  }
+}
+

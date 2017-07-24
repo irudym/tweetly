@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Tweetly
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .main-container
+      .header
+        .logged-greeting
+          - if user_signed_in?
+            Hello,
+            = current_user.email
+        %h1
+          Tweetly
+        %p
+          Subscribe to most important tweets
+      - if user_signed_in?
+        .menu
+          .row
+            = show_menu
+      .app-body
+        .container-fluid
+          = yield
