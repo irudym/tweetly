@@ -29,6 +29,7 @@ class TweetlyTools
 
   def self.reload_agent
     unless TweetlyJob.pending?
+      puts "restart the agent"
       TweetlyJob.set_status true
       AgentReloadJob.perform_in(120, "reload")
     else
