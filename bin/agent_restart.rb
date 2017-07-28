@@ -1,4 +1,4 @@
-#!/bin/ruby
+#!/usr/bin/env ruby
 APP_DIR = "#{Dir.home}/apps/tweetly"
 
 # read PID file
