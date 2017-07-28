@@ -15,25 +15,25 @@ class TweetlyTools
       config.access_token_secret = ACCESS_TOKEN_SECRET
     end
 
-    logger.info "Get user IDs:: #{user_name}"
+    Rails.logger.info "Get user IDs:: #{user_name}"
     user_ids = client.users(user_name)
     user_ids.each do |user|
-      logger.debug "User: #{user.id}"
+      Rails.logger.debug "User: #{user.id}"
     end
     {error: nil, users: user_ids}
     rescue Exception => e
-      logger.fatal "Error!: #{e}"
+      Rails.logger.fatal "Error!: #{e}"
       {error: e, users: nil}
     end
   end
 
   def self.reload_agent
     unless TweetlyJob.pending?
-      logger.info "restart the agent"
+      Rails.logger.info "restart the agent"
       TweetlyJob.set_status true
       AgentReloadJob.perform_in(120, "reload")
     else
-      logger.info "the agent is already going to be restarted!"
+      Rails.logger.info "the agent is already going to be restarted!"
     end
   end
 
